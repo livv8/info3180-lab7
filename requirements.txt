@@ -7,3 +7,14 @@ Jinja2==2.11.3
 MarkupSafe==1.1.1
 Werkzeug==1.0.1
 WTForms==2.3.3
+astroid==2.4.2
+dnspython==2.1.0
+email-validator==1.1.2
+idna==3.1
+isort==5.7.0
+lazy-object-proxy==1.4.3
+mccabe==0.6.1
+pylint==2.6.0
+six==1.15.0
+toml==0.10.2
+wrapt==1.12.1
