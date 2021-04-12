@@ -12,6 +12,26 @@ from flask import render_template, request
 # Routing for your application.
 ###
 
+@app.route('/')
+def home():
+    """Render website's home page."""
+    return render_template('home.html')
+
+
+@app.route('/basic-form', methods=['GET', 'POST'])
+def basic_form():
+    if request.method == 'POST':
+        firstname = request.form['firstname']
+        lastname = request.form['lastname']
+        email = request.form['email']
+
+        return render_template('result.html',
+                               firstname=firstname,
+                               lastname=lastname,
+                               email=email)
+
+
+
 
 # Please create all new routes and view functions above this route.
 # This route is now our catch all route for our VueJS single page
