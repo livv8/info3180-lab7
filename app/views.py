@@ -18,17 +18,13 @@ def home():
     return render_template('home.html')
 
 
-@app.route('/basic-form', methods=['GET', 'POST'])
+@app.route('/api/upload', methods=['POST'])
 def basic_form():
     if request.method == 'POST':
-        firstname = request.form['firstname']
-        lastname = request.form['lastname']
-        email = request.form['email']
-
-        return render_template('result.html',
-                               firstname=firstname,
-                               lastname=lastname,
-                               email=email)
+        description = request.form['description']
+       
+        return render_template('result.html',description=description)
+                              
 
 
 
