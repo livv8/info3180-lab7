@@ -19,8 +19,12 @@ def home():
 
 
 @app.route('/api/upload', methods=['POST'])
-def basic_form():
+def upload():
     if request.method == 'POST':
+            message: "File Upload Successful"
+            filename: "your-uploaded-file.jpg"
+            description: "Some description for your image"
+        
         description = request.form['description']
        
         return render_template('result.html',description=description)
